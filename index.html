@@ -5,18 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Manoj Kumar R — Azure DevOps & Platform Engineer. Enterprise Azure Landing Zones, Terraform, OIDC. Based in India.">
+    content="Manoj Kumar R — Azure DevOps & Platform Engineer. Enterprise Azure Landing Zones, Terraform, OIDC.">
   <meta property="og:title" content="Manoj Kumar R — Azure DevOps & Platform Engineer">
   <meta property="og:description"
     content="Building enterprise cloud infrastructure with Azure, Terraform, and zero-secrets pipelines.">
-  <meta property="og:image" content="assets/images/profile.jpg">
-  <title>Manoj Kumar R — Azure DevOps &amp; Platform Engineer</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta property="og:image" content="assets/images/og-image.jpg">
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <title>Manoj Kumar R — Azure DevOps &amp; Platform Engineer</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
+
+  <!-- Particle canvas -->
+  <canvas id="particle-canvas"></canvas>
 
   <!-- ══ NAVBAR ══════════════════════════════════════════════ -->
   <nav>
@@ -35,11 +38,10 @@
   <section id="hero">
     <div class="hero-grid">
 
-      <!-- Left -->
       <div class="hero-left">
         <p class="hero-eyebrow">Azure DevOps &amp; Platform Engineer</p>
         <h1 class="hero-name">
-          Manoj<br>
+          <span class="white">Manoj</span><br>
           <span class="accent">Kumar R</span>
         </h1>
         <p class="hero-role">
@@ -47,7 +49,6 @@
           without human babysitting — automated, auditable, recoverable.
         </p>
 
-        <!-- Terminal -->
         <div class="terminal">
           <div class="terminal-bar">
             <span class="t-dot red"></span>
@@ -77,11 +78,11 @@
         </div>
       </div>
 
-      <!-- Right: photo -->
       <div class="hero-photo-wrap">
         <div class="hex-outer">
           <div class="hex-glow"></div>
           <div class="hex-spin"></div>
+          <div class="hex-spin-inner"></div>
           <img src="assets/images/profile.jpg" alt="Manoj Kumar R" class="hex-img">
           <span class="float-tag">Terraform</span>
           <span class="float-tag">Azure DevOps</span>
@@ -124,23 +125,16 @@
 
     <div class="about-grid">
       <div class="reveal reveal-d1">
-        <p>
-          I'm a <strong>Cloud &amp; DevOps Engineer</strong> with 3.6 years of hands-on production experience.
-          I specialise in enterprise <span class="accent">Azure Landing Zones</span>,
-          <span class="accent">Terraform AVM modules</span>, and secure CI/CD pipelines built on
-          <span class="accent">OIDC/Workload Identity Federation</span> — no secrets in pipelines, ever.
-        </p>
-        <p>
-          At LTIMindtree, I <strong>delivered a full single-region ALZ in under 1 week</strong> — a setup that
-          typically takes 3–4 weeks — and independently proposed a hybrid 20/80 manual-automated
-          deployment model that was adopted as the team standard.
-        </p>
-        <p>
-          I've resolved production Terraform state corruption, eliminated authentication failures across
-          pipeline stages, and authored <strong>50+ internal white papers</strong> that reduced team
-          dependency on external consultants. I believe infrastructure should be boring in production
-          and interesting in the codebase.
-        </p>
+        <p>I'm a <strong>Cloud &amp; DevOps Engineer</strong> with 3.6 years of hands-on production experience. I
+          specialise in enterprise <span class="accent">Azure Landing Zones</span>, <span class="accent">Terraform AVM
+            modules</span>, and secure CI/CD pipelines built on <span class="accent">OIDC/Workload Identity
+            Federation</span> — no secrets in pipelines, ever.</p>
+        <p>At LTIMindtree, I <strong>delivered a full single-region ALZ in under 1 week</strong> — a setup that
+          typically takes 3–4 weeks — and independently proposed a hybrid 20/80 manual-automated deployment model that
+          was adopted as the team standard.</p>
+        <p>I've resolved production Terraform state corruption, eliminated authentication failures across pipeline
+          stages, and authored <strong>50+ internal white papers</strong> that reduced team dependency on external
+          consultants. I believe infrastructure should be boring in production and interesting in the codebase.</p>
         <div class="about-badges">
           <span class="badge">IaC-First</span>
           <span class="badge">Zero-Secrets</span>
@@ -152,32 +146,18 @@
 
       <div class="reveal reveal-d2">
         <div class="info-table">
-          <div class="info-row">
-            <span class="info-key">Location</span>
-            <span class="info-val">Erode, Tamil Nadu, India</span>
-          </div>
-          <div class="info-row">
-            <span class="info-key">Current</span>
-            <span class="info-val">LTM (LTIMindtree) · Azure DevOps &amp; Platform Engineer</span>
-          </div>
-          <div class="info-row">
-            <span class="info-key">Previous</span>
-            <span class="info-val">Cognizant Technology Solutions · Cloud Support Engineer</span>
-          </div>
-          <div class="info-row">
-            <span class="info-key">Cert</span>
-            <span class="info-val">Microsoft AZ-900 · Azure Fundamentals · 2024</span>
-          </div>
-          <div class="info-row">
-            <span class="info-key">LinkedIn</span>
-            <span class="info-val"><a href="https://linkedin.com/in/manoj2606" target="_blank">linkedin.com/in/manoj2606
-                ↗</a></span>
-          </div>
-          <div class="info-row">
-            <span class="info-key">GitHub</span>
-            <span class="info-val"><a href="https://github.com/manoj-2606" target="_blank">github.com/manoj-2606
-                ↗</a></span>
-          </div>
+          <div class="info-row"><span class="info-key">Location</span><span class="info-val">Erode, Tamil Nadu,
+              India</span></div>
+          <div class="info-row"><span class="info-key">Current</span><span class="info-val">LTM (LTIMindtree) · Azure
+              DevOps &amp; Platform Engineer</span></div>
+          <div class="info-row"><span class="info-key">Previous</span><span class="info-val">Cognizant Technology
+              Solutions · Cloud Support Engineer</span></div>
+          <div class="info-row"><span class="info-key">Cert</span><span class="info-val">Microsoft AZ-900 · Azure
+              Fundamentals · 2024</span></div>
+          <div class="info-row"><span class="info-key">LinkedIn</span><span class="info-val"><a
+                href="https://linkedin.com/in/manoj2606" target="_blank">linkedin.com/in/manoj2606 ↗</a></span></div>
+          <div class="info-row"><span class="info-key">GitHub</span><span class="info-val"><a
+                href="https://github.com/manoj-2606" target="_blank">github.com/manoj-2606 ↗</a></span></div>
         </div>
       </div>
     </div>
@@ -195,54 +175,35 @@
       <div class="stack-group reveal reveal-d1">
         <h4>Cloud &amp; Architecture</h4>
         <div class="tag-row">
-          <span class="s-tag">Azure</span>
-          <span class="s-tag">Azure Landing Zones (ALZ)</span>
-          <span class="s-tag">Hub-Spoke Networking</span>
-          <span class="s-tag">Management Groups</span>
-          <span class="s-tag">Azure Policy (DINE)</span>
-          <span class="s-tag">RBAC</span>
-          <span class="s-tag">Private DNS Resolver</span>
-          <span class="s-tag">Log Analytics</span>
+          <span class="s-tag">Azure</span><span class="s-tag">Azure Landing Zones (ALZ)</span><span
+            class="s-tag">Hub-Spoke Networking</span><span class="s-tag">Management Groups</span><span
+            class="s-tag">Azure Policy (DINE)</span><span class="s-tag">RBAC</span><span class="s-tag">Private DNS
+            Resolver</span><span class="s-tag">Log Analytics</span>
         </div>
       </div>
-
       <div class="stack-group reveal reveal-d2">
         <h4>Infrastructure as Code</h4>
         <div class="tag-row">
-          <span class="s-tag">Terraform (HCL)</span>
-          <span class="s-tag">AVM Modules</span>
-          <span class="s-tag">ALZ Terraform Accelerator</span>
-          <span class="s-tag">Feature-Flag Architecture</span>
-          <span class="s-tag">Remote State (Azure Blob)</span>
-          <span class="s-tag">Terraform Workspaces</span>
+          <span class="s-tag">Terraform (HCL)</span><span class="s-tag">AVM Modules</span><span class="s-tag">ALZ
+            Terraform Accelerator</span><span class="s-tag">Feature-Flag Architecture</span><span class="s-tag">Remote
+            State (Azure Blob)</span><span class="s-tag">Terraform Workspaces</span>
         </div>
       </div>
-
       <div class="stack-group reveal reveal-d3">
         <h4>CI/CD &amp; Automation</h4>
         <div class="tag-row">
-          <span class="s-tag">Azure DevOps Pipelines</span>
-          <span class="s-tag">GitHub Actions</span>
-          <span class="s-tag">OIDC / Workload Identity Federation</span>
-          <span class="s-tag">Jenkins</span>
-          <span class="s-tag">Argo CD</span>
-          <span class="s-tag">Helm</span>
-          <span class="s-tag">GitOps</span>
-          <span class="s-tag">PowerShell</span>
-          <span class="s-tag">Bash</span>
+          <span class="s-tag">Azure DevOps Pipelines</span><span class="s-tag">GitHub Actions</span><span
+            class="s-tag">OIDC / Workload Identity Federation</span><span class="s-tag">Jenkins</span><span
+            class="s-tag">Argo CD</span><span class="s-tag">Helm</span><span class="s-tag">GitOps</span><span
+            class="s-tag">PowerShell</span><span class="s-tag">Bash</span>
         </div>
       </div>
-
       <div class="stack-group reveal reveal-d4">
         <h4>Containers &amp; Orchestration</h4>
         <div class="tag-row">
-          <span class="s-tag">Docker</span>
-          <span class="s-tag">Kubernetes (AKS)</span>
-          <span class="s-tag">Microservices</span>
-          <span class="s-tag">Git / GitHub</span>
-          <span class="s-tag">Linux</span>
-          <span class="s-tag">ServiceNow (ITSM)</span>
-          <span class="s-tag">ITIL</span>
+          <span class="s-tag">Docker</span><span class="s-tag">Kubernetes (AKS)</span><span
+            class="s-tag">Microservices</span><span class="s-tag">Git / GitHub</span><span
+            class="s-tag">Linux</span><span class="s-tag">ServiceNow (ITSM)</span><span class="s-tag">ITIL</span>
         </div>
       </div>
     </div>
@@ -257,8 +218,6 @@
     </div>
 
     <div class="timeline-wrap">
-
-      <!-- LTM -->
       <div class="tl-item reveal reveal-d1">
         <div class="tl-dot active"></div>
         <div class="tl-card">
@@ -283,7 +242,6 @@
         </div>
       </div>
 
-      <!-- Cognizant -->
       <div class="tl-item reveal reveal-d2">
         <div class="tl-dot"></div>
         <div class="tl-card">
@@ -308,7 +266,6 @@
           </ul>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -321,23 +278,14 @@
     </div>
 
     <div class="projects-grid">
-
-      <!-- P1 -->
       <div class="proj-card reveal reveal-d1">
         <p class="proj-idx">01 / Enterprise IaC</p>
         <h3 class="proj-name">Azure Platform Landing Zone</h3>
-        <p class="proj-desc">
-          Deployed enterprise ALZ using Terraform AVM modules with Hub-Spoke networking,
-          Azure Policy (DINE), RBAC, Private DNS Resolver, and centralised Log Analytics.
-          Microsoft-aligned single-region production architecture with full management group hierarchy.
-          Delivered in under 1 week.
-        </p>
-        <div class="proj-tags">
-          <span class="p-tag">Terraform</span>
-          <span class="p-tag">AVM Modules</span>
-          <span class="p-tag">Azure DevOps</span>
-          <span class="p-tag">Hub-Spoke</span>
-          <span class="p-tag">Azure Policy</span>
+        <p class="proj-desc">Deployed enterprise ALZ using Terraform AVM modules with Hub-Spoke networking, Azure Policy
+          (DINE), RBAC, Private DNS Resolver, and centralised Log Analytics. Microsoft-aligned single-region production
+          architecture. Delivered in under 1 week.</p>
+        <div class="proj-tags"><span class="p-tag">Terraform</span><span class="p-tag">AVM Modules</span><span
+            class="p-tag">Azure DevOps</span><span class="p-tag">Hub-Spoke</span><span class="p-tag">Azure Policy</span>
         </div>
         <a href="https://github.com/manoj-2606/Azure-Landing-Zones" target="_blank" class="proj-link">
           <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
@@ -348,22 +296,14 @@
         </a>
       </div>
 
-      <!-- P2 -->
       <div class="proj-card reveal reveal-d2">
         <p class="proj-idx">02 / Security &amp; Automation</p>
         <h3 class="proj-name">Azure + GitHub Actions — OIDC Automation</h3>
-        <p class="proj-desc">
-          Implemented passwordless Azure authentication via OIDC/Workload Identity Federation.
-          Eliminated all secrets from CI/CD pipelines. Enabled secure, auditable cloud resource
-          provisioning with version control — 160+ structured commits demonstrating
-          production-grade GitOps discipline.
-        </p>
-        <div class="proj-tags">
-          <span class="p-tag">GitHub Actions</span>
-          <span class="p-tag">OIDC</span>
-          <span class="p-tag">Workload Identity</span>
-          <span class="p-tag">Zero-Secrets</span>
-        </div>
+        <p class="proj-desc">Implemented passwordless Azure authentication via OIDC/Workload Identity Federation.
+          Eliminated all secrets from CI/CD pipelines. Enabled secure, auditable cloud resource provisioning — 160+
+          structured commits demonstrating production-grade GitOps discipline.</p>
+        <div class="proj-tags"><span class="p-tag">GitHub Actions</span><span class="p-tag">OIDC</span><span
+            class="p-tag">Workload Identity</span><span class="p-tag">Zero-Secrets</span></div>
         <a href="https://github.com/manoj-2606/azure-github-actions" target="_blank" class="proj-link">
           <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
             <path
@@ -373,23 +313,14 @@
         </a>
       </div>
 
-      <!-- P3 -->
       <div class="proj-card reveal reveal-d3">
         <p class="proj-idx">03 / Infrastructure Modules</p>
         <h3 class="proj-name">Terraform Modular Infrastructure — AVM Pattern Build</h3>
-        <p class="proj-desc">
-          Designed reusable AVM-aligned HCL modules covering VMs, VNets, AKS, remote state
-          (Azure Blob), workspaces, and reusable module patterns. Scalable, workspace-aware,
-          production-pattern architecture with architecture documentation and interview Q&amp;A
-          at every milestone.
-        </p>
-        <div class="proj-tags">
-          <span class="p-tag">Terraform</span>
-          <span class="p-tag">AVM</span>
-          <span class="p-tag">AKS</span>
-          <span class="p-tag">Remote State</span>
-          <span class="p-tag">Modules</span>
-        </div>
+        <p class="proj-desc">Designed reusable AVM-aligned HCL modules covering VMs, VNets, AKS, remote state (Azure
+          Blob), workspaces, and reusable module patterns. Scalable, workspace-aware architecture with documentation and
+          Q&amp;A at every milestone.</p>
+        <div class="proj-tags"><span class="p-tag">Terraform</span><span class="p-tag">AVM</span><span
+            class="p-tag">AKS</span><span class="p-tag">Remote State</span><span class="p-tag">Modules</span></div>
         <a href="https://github.com/manoj-2606/Terraform" target="_blank" class="proj-link">
           <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
             <path
@@ -398,7 +329,6 @@
           github.com/manoj-2606/Terraform
         </a>
       </div>
-
     </div>
   </section>
 
@@ -408,9 +338,7 @@
       <p class="section-eyebrow">Recognition</p>
       <h2 class="section-title">Awards &amp; Achievements</h2>
     </div>
-
     <div class="awards-grid">
-
       <div class="award-card reveal reveal-d1">
         <p class="award-yr">2023 · Cognizant</p>
         <h3 class="award-title">Stellar Achiever</h3>
@@ -418,7 +346,6 @@
         <p class="award-desc">Awarded for building PowerShell automation that cut release cycles from 1.5 hrs to 25 mins
           — eliminating recurring production failures team-wide.</p>
       </div>
-
       <div class="award-card reveal reveal-d2">
         <p class="award-yr">2024 · Cognizant</p>
         <h3 class="award-title">Quality Implementer</h3>
@@ -426,15 +353,13 @@
         <p class="award-desc">Recognised for zero SLA breach across 70+ weekly ITIL service requests and consistent
           high-quality delivery throughout the year.</p>
       </div>
-
       <div class="award-card reveal reveal-d3">
         <p class="award-yr">Client Recognition</p>
         <h3 class="award-title">Client Commendation</h3>
         <p class="award-by">Direct client acknowledgement</p>
-        <p class="award-desc">"Talented &amp; Fast Learning Worker" — commended for completing 100+ production and
-          non-production tasks in a single week with zero errors.</p>
+        <p class="award-desc">"Talented &amp; Fast Learning Worker" — completed 100+ production and non-production tasks
+          in a single week with zero errors.</p>
       </div>
-
     </div>
   </section>
 
@@ -443,12 +368,9 @@
     <div class="section-header">
       <p class="section-eyebrow reveal">Contact</p>
       <h2 class="section-title reveal reveal-d1">Let's Talk</h2>
-      <p class="section-sub reveal reveal-d2">
-        Open to senior Azure DevOps and Platform Engineering roles.<br>
-        Reach out on any of these.
-      </p>
+      <p class="section-sub reveal reveal-d2">Open to senior Azure DevOps and Platform Engineering roles.<br>Reach out
+        on any of these.</p>
     </div>
-
     <div class="contact-row reveal reveal-d3">
       <a href="https://mail.google.com/mail/?view=cm&fs=1&to=manojmanojkumar2513@gmail.com" target="_blank"
         class="c-link">
