@@ -105,7 +105,8 @@ nav {
     color: var(--cyan);
     text-decoration: none;
     font-weight: 600;
-    letter-spacing: -0.02em
+    letter-spacing: -0.02em;
+    flex-shrink: 0
 }
 
 .nav-logo::after {
@@ -120,7 +121,21 @@ nav {
     display: flex;
     align-items: center;
     gap: 2.2rem;
-    list-style: none
+    list-style: none;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    flex-shrink: 1;
+    padding-bottom: 2px
+}
+
+.nav-links::-webkit-scrollbar {
+    display: none
+}
+
+.nav-links li {
+    flex-shrink: 0
 }
 
 .nav-links a {
@@ -131,7 +146,8 @@ nav {
     letter-spacing: 0.05em;
     text-transform: uppercase;
     transition: color 0.25s var(--ease);
-    position: relative
+    position: relative;
+    white-space: nowrap
 }
 
 .nav-links a::after {
@@ -476,14 +492,14 @@ nav {
     background: conic-gradient(from 90deg, transparent 60%, var(--cyan) 75%, transparent 90%)
 }
 
-/* Photo: center top of face = object-position center 12% */
+/* Photo: moved up — object-position center 6% */
 .hex-img {
     position: absolute;
     inset: 8px;
     width: calc(100% - 16px);
     height: calc(100% - 16px);
     object-fit: cover;
-    object-position: center 12%;
+    object-position: center 6%;
     clip-path: polygon(50% 0%, 96% 25%, 96% 75%, 50% 100%, 4% 75%, 4% 25%);
     z-index: 1;
     filter: brightness(1.07) saturate(1.15) contrast(1.02)
@@ -1410,6 +1426,59 @@ footer span {
 }
 
 @media(max-width:620px) {
+
+    /* Nav — logo stays left, links scroll right */
+    nav {
+        padding: 0 4%;
+        gap: 1rem
+    }
+
+    .nav-links {
+        gap: 1.4rem
+    }
+
+    .nav-links a {
+        font-size: 0.78rem
+    }
+
+    /* Hero */
+    #hero {
+        padding: 90px 4% 50px
+    }
+
+    .hero-name {
+        font-size: 2.4rem
+    }
+
+    .hero-ctas {
+        flex-direction: column
+    }
+
+    .btn-primary,
+    .btn-ghost {
+        width: 100%;
+        justify-content: center
+    }
+
+    /* Stats */
+    .stats-strip {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .stat-num {
+        font-size: 1.6rem
+    }
+
+    /* Sections */
+    section {
+        padding: 60px 4%
+    }
+
+    .section-title {
+        font-size: 1.6rem
+    }
+
+    /* Projects & Awards */
     .projects-grid {
         grid-template-columns: 1fr
     }
@@ -1418,13 +1487,26 @@ footer span {
         grid-template-columns: 1fr
     }
 
-    .hero-ctas {
-        flex-direction: column
+    /* Timeline */
+    .tl-card {
+        padding: 20px 18px
     }
 
+    /* Contact */
+    .contact-row {
+        flex-direction: column;
+        align-items: stretch
+    }
+
+    .c-link {
+        justify-content: center
+    }
+
+    /* Footer */
     footer {
         flex-direction: column;
         gap: 8px;
-        text-align: center
+        text-align: center;
+        padding: 20px 4%
     }
 }
