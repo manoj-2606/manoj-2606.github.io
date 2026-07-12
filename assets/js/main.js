@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let W, H, particles = [];
 
     function resize() {
-      W = canvas.width  = window.innerWidth;
+      W = canvas.width = window.innerWidth;
       H = canvas.height = window.innerHeight;
     }
     resize();
@@ -18,12 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
     class Particle {
       constructor() { this.reset(); }
       reset() {
-        this.x  = rand(0, W);
-        this.y  = rand(0, H);
+        this.x = rand(0, W);
+        this.y = rand(0, H);
         this.vx = rand(-0.18, 0.18);
         this.vy = rand(-0.18, 0.18);
-        this.r  = rand(0.8, 2.2);
-        this.a  = rand(0.1, 0.5);
+        this.r = rand(0.8, 2.2);
+        this.a = rand(0.1, 0.5);
       }
       update() {
         this.x += this.vx;
@@ -72,20 +72,20 @@ document.addEventListener('DOMContentLoaded', () => {
   if (tb) {
     const sequence = [
       { kind: 'prompt', text: '$ whoami' },
-      { kind: 'out',    html: '  <span class="t-key">Manoj Kumar R</span>' },
+      { kind: 'out', html: '  <span class="t-key">Manoj Kumar R</span>' },
       { kind: 'blank' },
       { kind: 'prompt', text: '$ cat role.txt' },
-      { kind: 'out',    html: '  <span class="t-val">Azure DevOps &amp; Platform Engineer</span>' },
+      { kind: 'out', html: '  <span class="t-val">Azure DevOps &amp; Platform Engineer</span>' },
       { kind: 'blank' },
       { kind: 'prompt', text: '$ terraform show --achievements' },
-      { kind: 'out',    html: '  <span class="t-check">✓</span> PLZ deployed in <span class="t-key">1 week</span>  <span class="t-dim">(industry avg: 4 weeks)</span>' },
-      { kind: 'out',    html: '  <span class="t-check">✓</span> <span class="t-key">99.9%</span> production uptime maintained' },
-      { kind: 'out',    html: '  <span class="t-check">✓</span> deployments <span class="t-key">75% faster</span> via PowerShell automation' },
+      { kind: 'out', html: '  <span class="t-check">✓</span> PLZ deployed in <span class="t-key">1 week</span>  <span class="t-dim">(industry avg: 4 weeks)</span>' },
+      { kind: 'out', html: '  <span class="t-check">✓</span> <span class="t-key">99.9%</span> production uptime maintained' },
+      { kind: 'out', html: '  <span class="t-check">✓</span> deployments <span class="t-key">75% faster</span> via PowerShell automation' },
       { kind: 'blank' },
       { kind: 'prompt', text: '$ git log --oneline --my-work' },
-      { kind: 'out',    html: '  <span class="t-dim">a3f2c1d</span>  ALZ Terraform deployment    <span class="t-check">RUNNING</span>' },
-      { kind: 'out',    html: '  <span class="t-dim">b7e9f2a</span>  OIDC federation configured  <span class="t-check">RUNNING</span>' },
-      { kind: 'out',    html: '  <span class="t-dim">c4d8a3e</span>  State corruption recovered  <span class="t-check">RUNNING</span>' },
+      { kind: 'out', html: '  <span class="t-dim">a3f2c1d</span>  ALZ Terraform deployment    <span class="t-check">RUNNING</span>' },
+      { kind: 'out', html: '  <span class="t-dim">b7e9f2a</span>  OIDC federation configured  <span class="t-check">RUNNING</span>' },
+      { kind: 'out', html: '  <span class="t-dim">c4d8a3e</span>  State corruption recovered  <span class="t-check">RUNNING</span>' },
     ];
 
     let si = 0, ci = 0, el = null;
@@ -166,11 +166,11 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       if (!entry.isIntersecting || entry.target.dataset.done) return;
       entry.target.dataset.done = '1';
-      const target  = parseFloat(entry.target.dataset.target);
-      const suffix  = entry.target.dataset.suffix || '';
+      const target = parseFloat(entry.target.dataset.target);
+      const suffix = entry.target.dataset.suffix || '';
       const isFloat = !Number.isInteger(target);
-      const dur     = 1600;
-      const t0      = performance.now();
+      const dur = 1600;
+      const t0 = performance.now();
       function tick(now) {
         const p = Math.min((now - t0) / dur, 1);
         const e = 1 - Math.pow(1 - p, 3);
@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.counter').forEach(el => counterObs.observe(el));
 
   /* ── ACTIVE NAV ─────────────────────────────────────────── */
-  const sections   = document.querySelectorAll('section[id]');
+  const sections = document.querySelectorAll('section[id]');
   const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
   const navObs = new IntersectionObserver((entries) => {
     entries.forEach(e => {
@@ -210,8 +210,23 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.appendChild(glow);
   document.addEventListener('mousemove', e => {
     glow.style.left = e.clientX + 'px';
-    glow.style.top  = e.clientY + 'px';
+    glow.style.top = e.clientY + 'px';
   });
+
+  /* ── PIPELINE NODE ANIMATION ────────────────────────────── */
+  const pipelineObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const nodes = entry.target.querySelectorAll('.pipe-node');
+      nodes.forEach((node, i) => {
+        setTimeout(() => node.classList.add('lit'), i * 300);
+      });
+      pipelineObs.unobserve(entry.target);
+    });
+  }, { threshold: 0.25 });
+
+  const pipelineTrack = document.querySelector('.pipeline-track');
+  if (pipelineTrack) pipelineObs.observe(pipelineTrack);
 
   /* ── SMOOTH SCROLL ──────────────────────────────────────── */
   document.querySelectorAll('a[href^="#"]').forEach(a => {

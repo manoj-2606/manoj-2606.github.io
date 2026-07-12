@@ -125,16 +125,35 @@
 
     <div class="about-grid">
       <div class="reveal reveal-d1">
-        <p>I'm a <strong>Cloud &amp; DevOps Engineer</strong> with 3.6 years of hands-on production experience. I
-          specialise in enterprise <span class="accent">Azure Landing Zones</span>, <span class="accent">Terraform AVM
-            modules</span>, and secure CI/CD pipelines built on <span class="accent">OIDC/Workload Identity
-            Federation</span> — no secrets in pipelines, ever.</p>
-        <p>At LTIMindtree, I <strong>delivered a full single-region ALZ in under 1 week</strong> — a setup that
-          typically takes 3–4 weeks — and independently proposed a hybrid 20/80 manual-automated deployment model that
-          was adopted as the team standard.</p>
-        <p>I've resolved production Terraform state corruption, eliminated authentication failures across pipeline
-          stages, and authored <strong>50+ internal white papers</strong> that reduced team dependency on external
-          consultants. I believe infrastructure should be boring in production and interesting in the codebase.</p>
+        <p>I'm an <strong>Azure DevOps &amp; Platform Engineer</strong> with <strong>4 years of experience</strong>
+          building enterprise cloud infrastructure. I specialise in <span class="accent">Azure Landing Zones</span>,
+          <span class="accent">Terraform AVM modules</span>, and <span class="accent">OIDC / Workload Identity
+            Federation</span> — zero secrets in pipelines, always.</p>
+
+        <div class="impact-grid">
+          <div class="impact-card">
+            <span class="impact-num">1 wk</span>
+            <span class="impact-label">Full ALZ Delivery</span>
+            <span class="impact-sub">vs 3–4 week industry standard</span>
+          </div>
+          <div class="impact-card">
+            <span class="impact-num">99.9%</span>
+            <span class="impact-label">Production Uptime</span>
+            <span class="impact-sub">3 years, zero SLA breach</span>
+          </div>
+          <div class="impact-card">
+            <span class="impact-num">4</span>
+            <span class="impact-label">Live AI SaaS Tools</span>
+            <span class="impact-sub">built alongside full-time work</span>
+          </div>
+        </div>
+
+        <p style="font-size:0.92rem;color:var(--text-muted);line-height:1.8;">I've resolved production Terraform state
+          corruption, eliminated authentication failures across pipeline stages, authored <strong
+            style="color:var(--text)">50+ internal white papers</strong>, and independently proposed architectural
+          models adopted as team standards. Infrastructure should be boring in production and interesting in the
+          codebase.</p>
+
         <div class="about-badges">
           <span class="badge">IaC-First</span>
           <span class="badge">Zero-Secrets</span>
@@ -158,6 +177,8 @@
                 href="https://linkedin.com/in/manoj2606" target="_blank">linkedin.com/in/manoj2606 ↗</a></span></div>
           <div class="info-row"><span class="info-key">GitHub</span><span class="info-val"><a
                 href="https://github.com/manoj-2606" target="_blank">github.com/manoj-2606 ↗</a></span></div>
+          <div class="info-row"><span class="info-key">Portfolio</span><span class="info-val"><a
+                href="https://manoj-2606.github.io" target="_blank">manoj-2606.github.io ↗</a></span></div>
         </div>
       </div>
     </div>
@@ -269,6 +290,76 @@
     </div>
   </section>
 
+  <!-- ══ PIPELINE FLOW ════════════════════════════════════════ -->
+  <section id="pipeline">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">Workflow</p>
+      <h2 class="section-title">How I Ship Infrastructure</h2>
+      <p class="section-sub">The end-to-end delivery pattern I run on every enterprise project.</p>
+    </div>
+
+    <div class="pipeline-wrap">
+      <div class="pipeline-track">
+
+        <div class="pipe-node">
+          <div class="pipe-dot">🔀</div>
+          <div class="pipe-label">
+            <span class="pipe-tool">Code Push</span>
+            <span class="pipe-desc">Feature branch<br>→ Pull Request</span>
+            <span class="pipe-badge">Git</span>
+          </div>
+        </div>
+
+        <div class="pipe-node">
+          <div class="pipe-dot">⚙️</div>
+          <div class="pipe-label">
+            <span class="pipe-tool">CI Pipeline</span>
+            <span class="pipe-desc">Validate · Lint<br>Pester checks</span>
+            <span class="pipe-badge">Azure DevOps</span>
+          </div>
+        </div>
+
+        <div class="pipe-node">
+          <div class="pipe-dot">📋</div>
+          <div class="pipe-label">
+            <span class="pipe-tool">Terraform Plan</span>
+            <span class="pipe-desc">Diff · Cost est.<br>State check</span>
+            <span class="pipe-badge">Terraform</span>
+          </div>
+        </div>
+
+        <div class="pipe-node">
+          <div class="pipe-dot">🚀</div>
+          <div class="pipe-label">
+            <span class="pipe-tool">Infra Apply</span>
+            <span class="pipe-desc">AVM modules<br>Hub-Spoke · RBAC</span>
+            <span class="pipe-badge">Azure</span>
+          </div>
+        </div>
+
+        <div class="pipe-node">
+          <div class="pipe-dot">🐳</div>
+          <div class="pipe-label">
+            <span class="pipe-tool">Container Deploy</span>
+            <span class="pipe-desc">Docker build<br>AKS rollout</span>
+            <span class="pipe-badge">Kubernetes</span>
+          </div>
+        </div>
+
+        <div class="pipe-node">
+          <div class="pipe-dot">📊</div>
+          <div class="pipe-label">
+            <span class="pipe-tool">Monitor</span>
+            <span class="pipe-desc">Alerts · Dashboards<br>Log Analytics</span>
+            <span class="pipe-badge">Azure Monitor</span>
+          </div>
+        </div>
+
+      </div>
+      <p class="pipeline-note reveal">Zero secrets in any stage · OIDC / Workload Identity Federation throughout</p>
+    </div>
+  </section>
+
   <!-- ══ PROJECTS ═════════════════════════════════════════════ -->
   <section id="projects">
     <div class="section-header reveal">
@@ -279,88 +370,133 @@
 
     <div class="projects-grid">
 
-      <div class="proj-card reveal reveal-d1">
-        <p class="proj-idx">01 / AI + DevOps</p>
-        <h3 class="proj-name">AI DevOps Incident Copilot</h3>
-        <p class="proj-desc">Full-stack SaaS — paste Azure DevOps or GitHub Actions logs, AI returns root cause, fix
-          recommendations, and severity (LOW/MEDIUM/HIGH/CRITICAL). ADO-style UI with animated pipeline flow and
-          incident history. Live and deployed.</p>
-        <div class="proj-tags"><span class="p-tag">React + Vite</span><span class="p-tag">FastAPI</span><span
-            class="p-tag">Groq LLM</span><span class="p-tag">Docker</span><span class="p-tag">Vercel</span><span
-            class="p-tag">Render</span></div>
-        <div style="display:flex;gap:14px;margin-top:auto;flex-wrap:wrap;">
-          <a href="https://ai-dev-ops-incident-copilot.vercel.app" target="_blank" class="proj-link">
-            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <!-- P1: FEATURED -->
+      <div class="proj-card featured reveal reveal-d1">
+        <div class="proj-left">
+          <p class="proj-idx">01 / AI + Interview Prep &nbsp;&middot;&nbsp; Featured</p>
+          <h3 class="proj-name">DevOps Interview Copilot</h3>
+          <p class="proj-desc">AI-powered interview practice platform for DevOps, Platform Engineering &amp; SRE roles.
+            Structured question sets across real scenarios — pipeline failures, Kubernetes, Terraform state, RBAC
+            design. AI evaluates your answers with scoring and adapts to weak areas. Built for engineers targeting
+            senior roles.</p>
+          <div class="proj-tags" style="margin-bottom:1.4rem">
+            <span class="p-tag">React + Vite</span><span class="p-tag">Groq LLM</span><span
+              class="p-tag">FastAPI</span><span class="p-tag">Vercel</span><span class="p-tag">Render</span>
+          </div>
+          <div style="display:flex;gap:14px;flex-wrap:wrap;">
+            <a href="https://devops-interview-copilot.vercel.app" target="_blank" class="proj-link"><svg width="14"
+                height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg> Live Demo ↗</a>
+            <a href="https://github.com/manoj-2606/DevOps-Interview-Copilot" target="_blank" class="proj-link"><svg
+                width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+              </svg> GitHub</a>
+          </div>
+        </div>
+        <div class="proj-right">
+          <div class="proj-stat">
+            <span class="proj-stat-num">4</span>
+            <span class="proj-stat-label">Engineering disciplines<br>DevOps · Platform · SRE · Cloud</span>
+          </div>
+          <div class="proj-divider"></div>
+          <div class="proj-stat">
+            <span class="proj-stat-num">AI</span>
+            <span class="proj-stat-label">Answer evaluation via<br>Groq llama-3.3-70b</span>
+          </div>
+          <div class="proj-divider"></div>
+          <div class="proj-stat">
+            <span class="proj-stat-num">BYOK</span>
+            <span class="proj-stat-label">Bring your own API key<br>zero cost to run</span>
+          </div>
+          <div class="proj-divider"></div>
+          <div class="proj-stat">
+            <span class="proj-stat-num">Live</span>
+            <span class="proj-stat-label">Vercel + Render<br>deployed &amp; running</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- P2: Kubernetes YAML Validator — violet -->
+      <div class="proj-card reveal reveal-d1" data-accent="violet">
+        <p class="proj-idx">02 / AI + Kubernetes</p>
+        <h3 class="proj-name">Kubernetes YAML Validator</h3>
+        <p class="proj-desc">Paste any Kubernetes manifest — AI detects errors by resource scope, explains root cause,
+          and returns a corrected YAML ready to apply. Supports Deployments, Services, ConfigMaps, Ingress, PVCs and
+          more.</p>
+        <div class="proj-tags">
+          <span class="p-tag p-tag-violet">React + Vite</span><span class="p-tag p-tag-violet">Python /
+            FastAPI</span><span class="p-tag p-tag-violet">Groq API</span><span class="p-tag p-tag-violet">Docker</span>
+        </div>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+          <a href="https://kubernetes-yaml-validator.vercel.app" target="_blank" class="proj-link"><svg width="14"
+              height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
               <polyline points="15 3 21 3 21 9" />
               <line x1="10" y1="14" x2="21" y2="3" />
-            </svg>
-            Live Demo ↗
-          </a>
-          <a href="https://github.com/manoj-2606/AI-DevOps-Incident-Copilot" target="_blank" class="proj-link">
-            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+            </svg> Live Demo ↗</a>
+          <a href="https://github.com/manoj-2606/Kubernetes-YAML-Validator" target="_blank" class="proj-link"><svg
+              width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
               <path
                 d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
-            </svg>
-            GitHub
-          </a>
+            </svg> GitHub</a>
         </div>
       </div>
 
-      <div class="proj-card reveal reveal-d2">
-        <p class="proj-idx">02 / Enterprise IaC</p>
-        <h3 class="proj-name">Azure Platform Landing Zone</h3>
-        <p class="proj-desc">Deployed enterprise ALZ using Terraform AVM modules with Hub-Spoke networking, Azure Policy
-          (DINE), RBAC, Private DNS Resolver, and centralised Log Analytics. Microsoft-aligned single-region production
-          architecture. Delivered in under 1 week.</p>
-        <div class="proj-tags"><span class="p-tag">Terraform</span><span class="p-tag">AVM Modules</span><span
-            class="p-tag">Azure DevOps</span><span class="p-tag">Hub-Spoke</span><span class="p-tag">Azure Policy</span>
+      <!-- P3: AI Incident Copilot — amber -->
+      <div class="proj-card reveal reveal-d2" data-accent="amber">
+        <p class="proj-idx">03 / AI + Pipeline Debugging</p>
+        <h3 class="proj-name">AI DevOps Incident Copilot</h3>
+        <p class="proj-desc">Paste Azure DevOps or GitHub Actions logs — AI returns root cause, fix steps, and severity
+          (LOW/MEDIUM/HIGH/CRITICAL). ADO-style UI with animated pipeline flow and incident history.</p>
+        <div class="proj-tags">
+          <span class="p-tag p-tag-amber">React + Vite</span><span class="p-tag p-tag-amber">FastAPI</span><span
+            class="p-tag p-tag-amber">Groq LLM</span><span class="p-tag p-tag-amber">Docker · Render</span>
         </div>
-        <a href="https://github.com/manoj-2606/Azure-Landing-Zones" target="_blank" class="proj-link"
-          style="margin-top:auto;">
-          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
-          </svg>
-          github.com/manoj-2606/Azure-Landing-Zones
-        </a>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+          <a href="https://ai-dev-ops-incident-copilot.vercel.app" target="_blank" class="proj-link"><svg width="14"
+              height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+              <polyline points="15 3 21 3 21 9" />
+              <line x1="10" y1="14" x2="21" y2="3" />
+            </svg> Live Demo ↗</a>
+          <a href="https://github.com/manoj-2606/AI-DevOps-Incident-Copilot" target="_blank" class="proj-link"><svg
+              width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+            </svg> GitHub</a>
+        </div>
       </div>
 
-      <div class="proj-card reveal reveal-d3">
-        <p class="proj-idx">03 / Security &amp; Automation</p>
-        <h3 class="proj-name">Azure + GitHub Actions — OIDC Automation</h3>
-        <p class="proj-desc">Implemented passwordless Azure authentication via OIDC/Workload Identity Federation.
-          Eliminated all secrets from CI/CD pipelines. Enabled secure, auditable cloud resource provisioning across 160+
-          structured commits demonstrating production-grade GitOps discipline.</p>
-        <div class="proj-tags"><span class="p-tag">GitHub Actions</span><span class="p-tag">OIDC</span><span
-            class="p-tag">Workload Identity</span><span class="p-tag">Zero-Secrets</span></div>
-        <a href="https://github.com/manoj-2606/azure-github-actions" target="_blank" class="proj-link"
-          style="margin-top:auto;">
-          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
-          </svg>
-          github.com/manoj-2606/azure-github-actions
-        </a>
+      <!-- P4: Azure Pipeline YAML Generator — emerald -->
+      <div class="proj-card reveal reveal-d3" data-accent="emerald">
+        <p class="proj-idx">04 / AI + Azure DevOps</p>
+        <h3 class="proj-name">Azure Pipeline YAML Generator</h3>
+        <p class="proj-desc">Generates production-ready Azure DevOps pipeline YAML — Docker, Node.js, Terraform, .NET,
+          Python, and generic workflows. AI handles structure, stage ordering, and best practices automatically.</p>
+        <div class="proj-tags">
+          <span class="p-tag p-tag-emerald">React + Vite</span><span class="p-tag p-tag-emerald">Groq LLM</span><span
+            class="p-tag p-tag-emerald">Azure DevOps</span><span class="p-tag p-tag-emerald">Vercel</span>
+        </div>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+          <a href="https://azure-pipeline-yaml-generator.vercel.app" target="_blank" class="proj-link"><svg width="14"
+              height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+              <polyline points="15 3 21 3 21 9" />
+              <line x1="10" y1="14" x2="21" y2="3" />
+            </svg> Live Demo ↗</a>
+          <a href="https://github.com/manoj-2606/Azure-Pipeline-YAML-Generator" target="_blank" class="proj-link"><svg
+              width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+            </svg> GitHub</a>
+        </div>
       </div>
 
-      <div class="proj-card reveal reveal-d4">
-        <p class="proj-idx">04 / Infrastructure Modules</p>
-        <h3 class="proj-name">Terraform Modular Infrastructure — AVM Pattern Build</h3>
-        <p class="proj-desc">Designed reusable AVM-aligned HCL modules covering VMs, VNets, AKS, remote state (Azure
-          Blob), workspaces, and reusable module patterns. Scalable, workspace-aware architecture with documentation and
-          Q&amp;A at every milestone.</p>
-        <div class="proj-tags"><span class="p-tag">Terraform</span><span class="p-tag">AVM</span><span
-            class="p-tag">AKS</span><span class="p-tag">Remote State</span><span class="p-tag">Modules</span></div>
-        <a href="https://github.com/manoj-2606/Terraform" target="_blank" class="proj-link" style="margin-top:auto;">
-          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
-          </svg>
-          github.com/manoj-2606/Terraform
-        </a>
-      </div>
-
+    </div>
     </div>
   </section>
 
