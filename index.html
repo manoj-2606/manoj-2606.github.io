@@ -254,15 +254,15 @@
               topology and governance.</li>
             <li><strong>Designed and presented a hybrid 20% manual / 80% automated deployment model</strong> to senior
               leadership and infrastructure architects — adopted as the standard delivery approach for the project.</li>
-            <li><strong>Recovered critical Terraform state</strong> (stale blob lease corruption) without data loss by
-              breaking the active lease and restoring the errored state file — <strong>unblocked production pipelines
-                with zero rollback</strong>.</li>
-            <li><strong>Eliminated persistent pipeline authentication failures</strong> by enforcing Azure AD-only
-              storage access policy across all Terraform stages — permanently fixed access-denied errors that blocked
-              the team for multiple days.</li>
-            <li><strong>Architected a feature-flag-driven Terraform module structure</strong> using AVM patterns
-              enabling safe partial deployments without state corruption — adopted as team standard for incremental ALZ
-              rollout.</li>
+            <li><strong>Architected a config-driven cross-tenant Azure migration pipeline</strong> supporting
+              SingleTenant and CrossTenant modes — full mode switch requires changes to two files only, zero pipeline
+              code modifications; adopted as delivery standard for the Microsoft Azure Sponsorship-Factory account.</li>
+            <li><strong>Built a settings-driven Pester validation framework</strong> covering 25+ Azure resource types
+              with a pre-flight execution engine that auto-classifies each resource before test execution — producing
+              structured XLSX reports per resource type as pipeline artifacts.</li>
+            <li><strong>Designed a 4-pipeline RBAC repatriation system</strong> (Export → Import → Verify → Rollback)
+              with automated source-to-target scope resolution via workload folder traversal — eliminating all manual
+              mapping and enabling safe opt-in rollback against any selected import run.</li>
           </ul>
         </div>
       </div>
@@ -387,8 +387,8 @@
               class="p-tag">FastAPI</span><span class="p-tag">Vercel</span>
           </div>
           <div style="display:flex;gap:14px;flex-wrap:wrap;">
-            <a href="https://sentinel-ai.vercel.app" target="_blank" class="proj-link"><svg width="14" height="14"
-                fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <a href="https://sentinel-ai-beta-smoky.vercel.app" target="_blank" class="proj-link"><svg width="14"
+                height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
                 <polyline points="15 3 21 3 21 9" />
                 <line x1="10" y1="14" x2="21" y2="3" />
